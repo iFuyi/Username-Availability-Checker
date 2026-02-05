@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handle Scout</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <img class="logo" src="/public/logo/256.png" alt="Handle Scout logo" />
+        <h1>Handle Scout</h1>
+        <p>Quick, best-effort username checks across popular platforms.</p>
+      </header>
+
+      <section class="card">
+        <div class="form-row">
+          <input
+            id="username"
+            type="text"
+            placeholder="Enter a username"
+            autocomplete="off"
+          />
+          <button id="check-btn">Check</button>
+        </div>
+        <div id="error" class="error" hidden></div>
+        <div id="loading" class="loading" hidden>Checking…</div>
+      </section>
+
+      <section class="card" id="results-card" hidden>
+        <div class="actions">
+          <button id="copy-btn" disabled>Copy JSON</button>
+          <button id="download-btn" disabled>Download JSON</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Status</th>
+              <th>Link</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </section>
+
+      <footer class="footer">
+        Best-effort checks. Some platforms may return unknown results.
+      </footer>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+:root {
+  --bg: #0b6a73;
+  --bg-deep: #075a60;
+  --card: #f5f7f7;
+  --text: #0f1f21;
+  --muted: #4d5b5d;
+  --accent: #0a6b73;
+  --accent-dark: #075a60;
+  --available: #1f8f4e;
+  --taken: #d44b4b;
+  --unknown: #7e8a8d;
+  --border: #d7e1e2;
+  --shadow: 0 18px 40px rgba(7, 90, 96, 0.18);
+  --font: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: radial-gradient(circle at top, #0f7c86, var(--bg) 45%, var(--bg-deep) 100%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: -0.04em;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  background: var(--accent);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+.error {
+  margin-top: 12px;
+  color: var(--taken);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.status-available {
+  color: var(--available);
+  font-weight: 600;
+}
+
+.status-taken {
+  color: var(--taken);
+  font-weight: 600;
+}
+
+.status-unknown {
+  color: var(--unknown);
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+thead {
+  text-align: left;
+  color: var(--muted);
+}
+
+th,
+td {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+}
