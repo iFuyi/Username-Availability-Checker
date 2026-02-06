@@ -82,12 +82,21 @@ async def run_once(username: str) -> None:
 
 
 def main() -> int:
-    print(color("Handle", colorama.Style.BRIGHT) + " " + color("/|", colorama.Fore.CYAN) + " " + color("Scout", colorama.Style.BRIGHT))
+    banner = r"""
+888   |                          888 888                 ,d88~~\                             d8
+888___|   /~~~8e  888-~88e  e88~\888 888  e88~~8e        8888     e88~~\  e88~-_  888  888 _d88__
+888   |       88b 888  888 d888  888 888 d888  88b       `Y88b   d888    d888   i 888  888  888
+888   |  e88~-888 888  888 8888  888 888 8888__888        `Y88b, 8888    8888   | 888  888  888
+888   | C888  888 888  888 Y888  888 888 Y888    ,          8888 Y888    Y888   ' 888  888  888
+888   |  "88_-888 888  888  "88_/888 888  "88___/        \__88P'  "88__/  "88_-~  "88_-888  "88_/
+"""
+    print(color(banner, colorama.Style.BRIGHT))
     print(color("Best-effort username checks across popular platforms.", colorama.Fore.WHITE))
     print("")
 
     while True:
-        username = input("Username (or 'q' to quit): ").strip()
+        prompt = color("Username (or 'q' to quit): ", colorama.Style.BRIGHT + colorama.Fore.CYAN)
+        username = input(prompt).strip()
         if username.lower() in {"q", "quit", "exit"}:
             print("Goodbye.")
             return 0

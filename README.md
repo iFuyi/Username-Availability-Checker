@@ -1,6 +1,18 @@
 # Username Availability Checker
 
-Check if a username is available across multiple platforms at once.
+Check if a username is available across multiple platforms from the terminal.
+
+---
+
+## Preview
+
+![Preview](preview.png)
+
+---
+
+## Requirements
+
+- Python 3.8+
 
 ---
 
@@ -79,6 +91,13 @@ For sites that require JavaScript (can't be checked automatically), add:
 
 ---
 
+## Notes
+
+- Checks are best-effort and lightweight.
+- Some platforms use heavy JavaScript and return `unknown`.
+
+---
+
 ## Contributing
 
 Pull requests are welcome. Please:
@@ -86,5 +105,3 @@ Pull requests are welcome. Please:
 - Keep checks best-effort and lightweight
 - Avoid API keys or heavy scraping
 - Add clear reasons for `unknown` results
-Edit `platforms.py` and add a new line:
-
