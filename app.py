@@ -7,23 +7,24 @@ from checker import check_username
 
 app = FastAPI(title="Handle Scout")
 BASE = Path(__file__).parent
+STATIC = BASE / "static"
 
-app.mount("/public", StaticFiles(directory=BASE / "public"), name="public")
+app.mount("/assets", StaticFiles(directory=STATIC / "assets"), name="assets")
 
 
 @app.get("/")
 async def index():
-    return FileResponse(BASE / "index.html")
+    return FileResponse(STATIC / "index.html")
 
 
 @app.get("/style.css")
 async def css():
-    return FileResponse(BASE / "style.css")
+    return FileResponse(STATIC / "style.css")
 
 
 @app.get("/app.js")
 async def js():
-    return FileResponse(BASE / "app.js")
+    return FileResponse(STATIC / "app.js")
 
 
 @app.get("/api/check")
