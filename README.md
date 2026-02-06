@@ -1,87 +1,84 @@
-# Handle Scout 🔎
+# Username Availability Checker
 
-Check if a username is available across multiple platforms — instantly!
-
-![License](https://img.shields.io/badge/license-MIT-green)
-![Python](https://img.shields.io/badge/python-3.8+-blue)
-
-## ✨ Features
-
-- Check username availability on 10+ platforms at once
-- Simple web interface — no coding required
-- Fast parallel checking
-- Suggestions for alternative usernames
-
-## 🚀 Quick Start (No Coding Required!)
-
-### Step 1: Download
-
-Click the green **Code** button above, then **Download ZIP**. Extract it anywhere.
-
-### Step 2: Install Python
-
-If you don't have Python installed:
-- **Mac**: Open Terminal and run `brew install python3`
-- **Windows**: Download from [python.org](https://python.org/downloads) (check "Add to PATH"!)
-- **Linux**: Run `sudo apt install python3 python3-pip`
-
-### Step 3: Run
-
-- **Mac/Linux**: Double-click `run.sh` or open Terminal and run `./run.sh`
-- **Windows**: Double-click `run.bat`
-
-### Step 4: Open
-
-Go to **http://localhost:8000** in your browser. Done! 🎉
+Check if a username is available across multiple platforms at once.
 
 ---
 
-## 🛠️ For Developers
+## Installation
 
-```bash
-git clone https://github.com/flodlol/Username-Availability-Checker.git
-cd Username-Availability-Checker
-pip install -r requirements.txt
+### Windows
+
+1. Install [Python](https://www.python.org/downloads/) (check "Add to PATH" during installation)
+
+2. Install required libraries:
+   ```
+   pip install -r requirements.txt
+   ```
+
+### Mac
+
+1. Install Python:
+   ```
+   brew install python3
+   ```
+
+2. Install required libraries:
+   ```
+   pip3 install -r requirements.txt
+   ```
+
+---
+
+## Running the App
+
+### Windows
+Double-click `run.bat` or run:
+```
 python app.py
 ```
 
-## 📡 Supported Platforms
+### Mac
+Double-click `run.sh` or run:
+```
+python3 app.py
+```
 
-| Platform | Status |
-|----------|--------|
-| GitHub | ✅ Reliable |
-| Reddit | ✅ Reliable |
-| GitLab | ✅ Reliable |
-| Bitbucket | ✅ Reliable |
-| Dev.to | ✅ Reliable |
-| CodePen | ✅ Reliable |
-| Dribbble | ✅ Reliable |
-| Behance | ✅ Reliable |
-| X (Twitter) | ⚠️ Manual check needed |
-| TikTok | ⚠️ Manual check needed |
-
-## 🤝 Contributing
-
-**Want to add a new platform?** It's super easy!
-
-1. Fork this repo
-2. Edit `platforms.py` and add one line:
-   ```python
-   {"name": "Instagram", "url": "https://instagram.com/{username}"},
-   ```
-3. Create a Pull Request
-
-That's it! We'd love your contributions. 💜
-
-### Ideas for contributions:
-- Add more platforms (Instagram, Snapchat, LinkedIn, etc.)
-- Improve the UI
-- Add dark/light mode toggle
-- Translations
+Then open http://localhost:8000 in your browser.
 
 ---
 
-## 📖 API
+## Supported Platforms
+
+- GitHub
+- Reddit
+- GitLab
+- Bitbucket
+- Dev.to
+- CodePen
+- Dribbble
+- Behance
+- X (Twitter) - manual check needed
+- TikTok - manual check needed
+
+---
+
+## Adding a New Platform
+
+Edit `platforms.py` and add a new line:
+
+```python
+{"name": "Instagram", "url": "https://instagram.com/{username}"},
+```
+
+For sites that require JavaScript (can't be checked automatically), add:
+
+```python
+{"name": "Snapchat", "url": "https://snapchat.com/add/{username}", "unreliable": True},
+```
+
+---
+
+## API
 
 ```
 GET /api/check?username=yourname
@@ -89,13 +86,17 @@ GET /api/check?username=yourname
 
 Returns JSON with availability status for each platform.
 
-## 📄 License
+---
 
-MIT — do whatever you want with it!
+## Contributing
+
+Pull requests are welcome! Adding new platforms is super easy - just one line in `platforms.py`.
 
 ---
 
-Made with ❤️ by [Jonas](https://github.com/flodlol)
+## License
+
+MIT
 
 Checklist:
 
