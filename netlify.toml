@@ -1,0 +1,9 @@
+[build]
+  command = "mkdir -p static/public && cp -R public/* static/public/"
+  publish = "static"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
