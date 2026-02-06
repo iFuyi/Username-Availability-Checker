@@ -3,9 +3,6 @@
   publish = "static"
   functions = "netlify/functions"
 
-[functions]
-  python_version = "3.11"
-
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/api"
