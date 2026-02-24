@@ -100,8 +100,24 @@ For sites that require JavaScript (can't be checked automatically), add:
 
 ## Contributing
 
-Pull requests are welcome. Please:
+## Contributing
+
+Contributions are welcome and appreciated! Whether it's fixing a typo, adding a feature, or just reporting a bug. All help is valued.
+
+### Pull requests are welcome. Please:
 
 - Keep checks best-effort and lightweight
 - Avoid API keys or heavy scraping
 - Add clear reasons for `unknown` results
+
+
+### To submit a PR
+
+1. Fork the repo
+2. Create a branch (`git checkout -b my-feature`)
+3. Make your changes
+4. Run `npm run lint` to check for issues
+5. Commit and push
+6. Open a pull request
+
+No contribution is too small. Even fixing a single typo helps.
